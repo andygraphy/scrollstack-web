@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scrollstack</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  
+  <link href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  	
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>	
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script> 
+  
+  <!--fire base link and js-->
+  <script src= "https://cdn.firebase.com/v0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/v0/firebase-auth-client.js"></script>
+  <script src="js/login.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script><!--window scroll js-->
+   </head>
+  
+<body>
+	<nav class="myNav navbar navbar-inverse">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>                        
+      			</button>
+         		<a class="navbar-brand" href="#"><img src="img/ss.png" style="margin-top:-10px;" ></a>
+      		</div>
+    		<div class=" collapse navbar-collapse" id="myNavbar">
+    			<ul class="nav navbar-nav pull-right">
+      				<li><a href="#section2" class="scroll"> Learn</a></li>
+      				<li><a href="#section3" class="scroll">Stack+ </a></li>
+      				<li><a href = "javascript:void(0)" onclick ="document.getElementById('light').style.display='block';
+                    document.getElementById('light1').style.display='none';">Join</a></li>
+                    <li><a href = "javascript:void(0)" onclick ="document.getElementById('light1').style.display='block';
+                    document.getElementById('light').style.display='none';">Login</a></li>
+      				<li><a href="" class="scroll">Blogs</a></li>
+    			</ul>
+        	</div>
+  		</div>
+  	</nav>
+	
+    <a href="#" class="backToTop"><img src="img/up.png" width="32"></a>	
+    
+    <!-- SIGNUP -->
+    <div id="light" class="white_content col-lg-3">
+    	<a href = "javascript:void(0)" onclick ="document.getElementById('light').style.display='none';
+        document.getElementById('fade').style.display='none'" class="pull-right" style="color:white; text-decoration:none"><strong>X</strong></a>				
+        <br>
+        <span class="col-lg-4" style="color:white;"> Email : </span>
+        <input type="text" id="email" name="email" class="col-lg-7"><br><br>
+  					
+        <span class="col-lg-4" style="color:white;" > Password :</span>
+        <input type="password" id="pswrd" name="password" class="col-lg-7 "><br><br>
+  					
+        <span class="col-lg-4"></span><input type="submit" id="signup" value="Signup" class="btn btn-warning col-lg-7">
+	</div>
+    
+    <!-- LOGIN -->
+    <div id="light1" class="white_content col-lg-3">
+    	<a href = "javascript:void(0)" onclick ="document.getElementById('light1').style.display='none'; document.getElementById('fade').style.display='none'" class="pull-right" style="color:white; text-decoration:none"><strong>X</strong></a>				
+        
+        <br>	
+ 	    <span class="col-lg-4" style="color:white;">Email :</span>
+        <input type="text" id="lemail" name="lemail" class="col-lg-7"><br><br>
+  		<span class="col-lg-4" style="color:white;">Password :</span>
+        <input type="password" id="lpswrd" name="lpassword" class="col-lg-7"><br><br>
+  		
+        <span class="col-lg-4"></span><input type="submit" id="login" value="Login" class="col-lg-7 btn btn-warning">
+    </div>
+    	
+  	<div class="container-fluid">
+  		<div class="row">
+    		<section id="section1" class="bg1">
+      			<div class="col-lg-4 content1 ui-widget">
+            		<h2>#Code #Build #Share</h2>
+            		
+                    <input class="form-control input-lg" style="color:white;" id="inputlg" type="text" placeholder="Search Android, IOS and C...">
+     		 	</div>
+                
+    		</section>
+    
+  			<section id="section2" class="bg2">
+        		<div class="row">
+            		<div class="col-md-3 list-position">
+                		<ul class="nav nav-pills">
+							<li class="active"><a href="#android" data-toggle="tab">Android</a></li>
+							<li><a href="#ios" data-toggle="tab">IOS</a></li>
+							<li><a href="#c" data-toggle="tab">C</a></li>
+						</ul>
+                	
+                    	<div class="tab-content">
+                			<div id="android" class="active tab-pane">
+                				<ul class="list-group">
+									<li class="active list-group-item">Concept on Z-scrolling website</li>
+									<li class="list-group-item">Android Widgets : Buttons - 1</li>
+									<li class="list-group-item">Android Widgets : Buttons - 2</li>
+									<li class="list-group-item">Implicit Intents</li>
+									<li class="list-group-item">Quick Intro to the Android Stack</li>
+								</ul>
+            				</div>
+                        	<div id="ios" class="tab-pane fade">
+                				<ul class="list-group">
+									<li class="active list-group-item">IOS 1</li>
+									<li class="list-group-item">IOS 2</li>
+									<li class="list-group-item">IOS 3</li>
+									<li class="list-group-item">IOS 4</li>
+									<li class="list-group-item">IOS 5</li>
+								</ul>
+            				</div>
+                        	<div id="c" class="tab-pane fade">
+                				<ul class="list-group">
+									<li class="active list-group-item">C 1</li>
+									<li class="list-group-item">C 2</li>
+									<li class="list-group-item">C 3</li>
+									<li class="list-group-item">C 4</li>
+									<li class="list-group-item">C 5</li>
+								</ul>
+            				</div>
+                    	</div>
+                    
+                	</div>
+                   
+            		<div class="col-md-9 list-position" >
+                		<iframe style="-webkit-box-shadow: 1px 1px 5px 2px #C9C9C9; box-shadow: 1px 1px 5px 2px #C9C9C9;" width="100%" height="450px" src="https://www.youtube.com/embed/Y1otjlw0Dd4" frameborder="0" allowfullscreen></iframe>
+            		</div>
+            	</div>
+      		</section>
+    
+    		<section id="section3" class="bg3">
+      			<div class="col-lg-3 content3 pull-right">
+            		<center><h2>Stack+<sup style="color:white;">Premium Access</sup></h2></center>
+                	<hr>
+            		<ul>
+         		   		<li>Access to all online tutorials</li>
+						<li>Email Support</li>
+						<li>Cancel Anytime</li>
+						<li>$5/month</li>
+           			</ul>
+                	<center><button class="btn btn-warning">Subscribe</button></center>
+				</div>
+        	</section>
+        
+        	<footer>
+            	<div class="pull-left " style="padding-top:5px;">Copyright (c) ScrollStack 2016</div>
+            	<div class="pull-right footer-social">
+            		<li><img src="img/mail.png"></li>
+               		<li><img src="img/fb.png"></li>
+               		<li><img src="img/twitter.png"></li>
+            	</div>
+        	</footer>
+   		</div>
+        </div>
+</body>
+
+</html>
